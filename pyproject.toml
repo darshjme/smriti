@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "agent-cache"
+version = "0.1.0"
+description = "Semantic and exact caching for LLM calls — cut costs by catching duplicate and similar prompts."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = []
+keywords = ["llm", "cache", "semantic", "ai", "cost-optimization"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+Homepage = "https://github.com/example/agent-cache"
+Issues   = "https://github.com/example/agent-cache/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/agent_cache"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts   = "-v"
