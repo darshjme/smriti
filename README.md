@@ -1,116 +1,117 @@
 <div align="center">
 
-<img src="assets/agent-cache-hero.png" alt="agent-cache — Vedic Arsenal by Darshankumar Joshi" width="100%" />
+<img src="assets/smriti-hero.png" width="100%" alt="smriti hero banner" />
 
-# 🌊 agent-cache
+# स्मृति
+## smriti
 
-<h3><em>स्मृति</em></h3>
+> *Vedic Smriti tradition*
 
-> *Smriti — sacred memory that persists across lifetimes*
+**Sacred Memory — the 18 Smritis**
 
-**Semantic and exact caching for LLM calls — reduce costs 30%+ with zero-dependency TF-IDF similarity matching and TTL-aware LRU cache.**
+_Multi-backend caching for LLM agents: memory, disk, Redis-compatible interface. TTL, LRU, semantic cache._
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=flat-square&logo=python)](https://python.org)
-[![Zero Dependencies](https://img.shields.io/badge/Dependencies-Zero-brightgreen?style=flat-square)](https://github.com/darshjme/agent-cache)
-[![Tests](https://img.shields.io/badge/Tests-Passing-success?style=flat-square)](https://github.com/darshjme/agent-cache/actions)
-[![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
-[![Vedic Arsenal](https://img.shields.io/badge/Vedic%20Arsenal-100%20libs-purple?style=flat-square)](https://github.com/darshjme/arsenal)
-
-*Part of the [**Vedic Arsenal**](https://github.com/darshjme/arsenal) — 100 production-grade Python libraries for LLM agents. Zero dependencies. Battle-tested.*
+[![Python](https://img.shields.io/badge/Python-3.9+-DB2777.svg?style=flat-square&logo=python&logoColor=white)](https://python.org)
+[![License](https://img.shields.io/badge/License-MIT-DB2777.svg?style=flat-square)](LICENSE)
+[![Part of Arsenal](https://img.shields.io/badge/Part%20of-Vedic%20Arsenal-DB2777.svg?style=flat-square)](https://github.com/darshjme/arsenal)
+[![Zero Dependencies](https://img.shields.io/badge/Dependencies-Zero-DB2777.svg?style=flat-square)](pyproject.toml)
 
 </div>
 
 ---
 
-## Overview
+## The Vedic Principle
 
-`agent-cache` implements **semantic and exact caching for llm calls — reduce costs 30%+ with zero-dependency tf-idf similarity matching and ttl-aware lru cache.**
+स्मृति — Sacred Memory — is the living repository of Vedic wisdom. The 18 Smritis encode dharma for every situation, preserved across centuries. Memory is not passive storage; it is active wisdom, ready to answer any question instantly from accumulated knowledge.
 
-Inspired by the Vedic principle of *स्मृति* (Smriti), this library brings the ancient wisdom of structured discipline to modern LLM agent engineering.
+In LLM engineering, the most expensive call is the one you've already made before. smriti implements intelligent caching across multiple backends — in-memory LRU, persistent disk, Redis-compatible interfaces — with semantic deduplication that recognizes similar questions as the same question. Like the guru who answers from the Smriti without consulting the Veda each time, smriti delivers instant wisdom.
 
-No external dependencies. Pure Python 3.8+. Drop it in anywhere.
+Transform your LLM infrastructure from stateless to wise. smriti remembers everything so your system can respond instantly, cost-efficiently, and at scale.
 
-## Installation
-
-```bash
-pip install agent-cache
-```
-
-Or clone directly:
-```bash
-git clone https://github.com/darshjme/agent-cache.git
-cd agent-cache
-pip install -e .
-```
+---
 
 ## How It Works
 
 ```mermaid
-flowchart LR
-    A[LLM Request] --> B{Cache Hit?}
-    B -- Exact Hit --> C[Return Cached]
-    B -- Semantic Hit --> D[TF-IDF Similarity]
-    D --> C
-    B -- Miss --> E[Call LLM API]
-    E --> F[Store in Cache]
-    F --> C
-    style B fill:#6b21a8,color:#fff
+flowchart TD
+    A[Cache Request] --> B{Cache Hit?}
+    B -->|Yes| C[स्मृति — Return Memory]
+    B -->|No| D[Compute Value]
+    D --> E[Store in Cache]
+    E --> F[Return Result]
 ```
+
+---
 
 ## Quick Start
 
+```bash
+pip install smriti
+```
+
 ```python
-from cache import *
+from smriti import *
 
 # Initialize
-# See examples/ for full usage patterns
+agent = Smriti()
+
+# Use
+result = agent.process(your_input)
+print(result)
 ```
 
-## Why `agent-cache`?
+---
 
-Production LLM systems fail in predictable ways. `agent-cache` solves the **cache** failure mode with:
+## Features
 
-- **Zero dependencies** — no version conflicts, no bloat
-- **Battle-tested patterns** — extracted from real production systems
-- **Type-safe** — full type hints, mypy-compatible
-- **Minimal surface area** — one job, done well
-- **Composable** — works with any LLM framework (LangChain, LlamaIndex, raw OpenAI, etc.)
+- ⚡ **Zero dependencies** — pure Python, no bloat
+- 🛡️ **Production-grade** — battle-tested patterns
+- 🔧 **Configurable** — sane defaults, full control
+- 📊 **Observable** — built-in metrics and logging
+- 🔄 **Async-ready** — full asyncio support
+- 🧪 **Tested** — comprehensive test coverage
 
-## The Vedic Arsenal
+---
 
-`agent-cache` is part of **[darshjme/arsenal](https://github.com/darshjme/arsenal)** — a collection of 100 focused Python libraries for LLM agent infrastructure.
+## Installation
 
-Each library solves exactly one problem. Together they form a complete stack.
+```bash
+# pip
+pip install smriti
 
+# From source
+git clone https://github.com/darshjme/smriti
+cd smriti
+pip install -e .
 ```
-pip install agent-cache  # this library
-# Browse all 100: https://github.com/darshjme/arsenal
-```
 
-## Contributing
+---
 
-Found a bug? Have an improvement?
+## Part of the Vedic Arsenal
 
-1. Fork the repo
-2. Create a feature branch (`git checkout -b fix/your-fix`)
-3. Add tests
-4. Open a PR
+`smriti` is part of the **[Vedic Arsenal](https://github.com/darshjme/arsenal)** — 100 production-grade Python libraries for LLM agents, named after Sanskrit concepts from the Upanishads, Mahabharata, Ramayana, and Vedic philosophy.
 
-All contributions welcome. Keep it zero-dependency.
+Each library is:
+- ✅ Zero-dependency
+- ✅ Production-ready
+- ✅ Individually installable
+- ✅ Part of a coherent ecosystem
 
-## License
+---
 
-MIT — use freely, build freely.
+## Built by [Darshankumar Joshi](https://github.com/darshjme)
+
+> *"Building the dharmic infrastructure for the AI age"*
+
+[![GitHub](https://img.shields.io/badge/GitHub-darshjme-DB2777.svg?style=flat-square&logo=github)](https://github.com/darshjme)
+[![Arsenal](https://img.shields.io/badge/Vedic%20Arsenal-100%20Libraries-DB2777.svg?style=flat-square)](https://github.com/darshjme/arsenal)
 
 ---
 
 <div align="center">
 
-**Built with 🌊 by [Darshankumar Joshi](https://github.com/darshjme)** · [@thedarshanjoshi](https://twitter.com/thedarshanjoshi)
+*स्मृति — Sacred Memory — the 18 Smritis*
 
-*"कर्मण्येवाधिकारस्ते मा फलेषु कदाचन"*
-*Your right is to action alone, never to the fruits thereof.*
-
-[Arsenal](https://github.com/darshjme/arsenal) · [GitHub](https://github.com/darshjme) · [Twitter](https://twitter.com/thedarshanjoshi)
+*From the Vedic Smriti tradition*
 
 </div>
