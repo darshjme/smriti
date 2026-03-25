@@ -1,10 +1,12 @@
 <div align="center">
 
-<img src="assets/agent-cache-hero.png" alt="agent-cache — Vedic Arsenal" width="100%" />
+<img src="assets/agent-cache-hero.png" alt="agent-cache — Vedic Arsenal by Darshankumar Joshi" width="100%" />
 
 # 🌊 agent-cache
 
-### *स्मृति* — Smriti — sacred memory that persists across lifetimes
+<h3><em>स्मृति</em></h3>
+
+> *Smriti — sacred memory that persists across lifetimes*
 
 **Semantic and exact caching for LLM calls — reduce costs 30%+ with zero-dependency TF-IDF similarity matching and TTL-aware LRU cache.**
 
@@ -39,6 +41,20 @@ Or clone directly:
 git clone https://github.com/darshjme/agent-cache.git
 cd agent-cache
 pip install -e .
+```
+
+## How It Works
+
+```mermaid
+flowchart LR
+    A[LLM Request] --> B{Cache Hit?}
+    B -- Exact Hit --> C[Return Cached]
+    B -- Semantic Hit --> D[TF-IDF Similarity]
+    D --> C
+    B -- Miss --> E[Call LLM API]
+    E --> F[Store in Cache]
+    F --> C
+    style B fill:#6b21a8,color:#fff
 ```
 
 ## Quick Start
@@ -90,7 +106,7 @@ MIT — use freely, build freely.
 
 <div align="center">
 
-**Built with 🌊 by [Darshankumar Joshi](https://github.com/darshjme)**
+**Built with 🌊 by [Darshankumar Joshi](https://github.com/darshjme)** · [@thedarshanjoshi](https://twitter.com/thedarshanjoshi)
 
 *"कर्मण्येवाधिकारस्ते मा फलेषु कदाचन"*
 *Your right is to action alone, never to the fruits thereof.*
