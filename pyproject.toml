@@ -24,8 +24,8 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/example/agent-cache"
-Issues   = "https://github.com/example/agent-cache/issues"
+Homepage = "https://github.com/darshjme/smriti"
+Issues   = "https://github.com/darshjme/smriti/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/agent_cache"]
